@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Menlo, sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background-color: rgb(248 248 255);
+    justify-content: center;
+}
+
+main {
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-title {
+    margin: 20px auto;
+    text-transform: uppercase;
+    color: rgb(100 102 129);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+}
+
+section.buttons {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+section.new-item {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(236 237 246);
+    border-radius: 10px;
+}
+
+form.new-item-form {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 30px;
+}
+
+.new-item label, .new-item-input {
+    font-size: 18px;
+}
+
+.new-item input {
+    border-radius: 10px;
+    padding: 6px;
+    border: 2px solid rgb(101 102 129);
+}
+
+.form-group {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+}
+
+section.items {
+    padding: 20px;
+    background-color: rgb(236 237 246);
+    border-radius: 10px;
+}
+
+.add-button {
+    padding: 10px 30px;
+    border-radius: 10px;
+    border-style: solid;
+    font-size: 16px;
+    font-family: monospace, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: rgb(98 112 240);
+    color: white;
+    border: 1px solid rgb(101 102 129);
+}
+
+.todo-list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+
+.todo-list-item {
+    list-style-type: none;
+    width: 200px;
+}
+
+.todo-list-item p {
+    font-size: 16px;
+}
+
+@media screen and (min-width: 900px) {
+    main {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        width: 90%;
+    }
+
+    .todo-list-item h2 {
+        font-size: 20px;
+    }
+
+    .todo-list-item p {
+        font-size: 16px;
+    }
+
+    .new-item label, .new-item-input {
+        font-size: 16px;
+    }
+}

@@ -21,11 +21,11 @@
                 <form method="post" class="new-item-form">
                     <div class="form-group">
                         <label for="todo-title">Título de tarea</label>
-                        <input type="text" id="todo-title">
+                        <input type="text" id="todo-title" required maxlength="30">
                     </div>
                     <div class="form-group">
-                        <label for="todo-description">Descripción de tarea</label>
-                        <input type="text" id="todo-description">
+                        <label for="todo-description">Descripción de tarea (opcional)</label>
+                        <input type="text" id="todo-description" maxlength="60">
                     </div>
                     <div class="form-group">
                         <button class="add-button">
@@ -33,26 +33,10 @@
                         </button>
                     </div>
                 </form>
-
             </section>
             <section class="items">
+                <h3 class="empty-list-message">¡Nada que hacer por hoy!</h3>
                 <ul class="todo-list">
-                    <li class="todo-list-item">
-                        <h2>Item Test #1</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nesciunt debitis quidem
-                            commodi reprehenderit tempora laudantium in fugit dolorum voluptas?</p>
-                    </li>
-                    <li class="todo-list-item">
-                        <h2>Item Test #2</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nesciunt debitis quidem
-                            commodi reprehenderit tempora laudantium in fugit dolorum voluptas?</p>
-                    </li>
-                    <li class="todo-list-item">
-                        <h2>Item Test #3</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nesciunt debitis quidem
-                            commodi reprehenderit tempora laudantium in fugit dolorum voluptas?</p>
-                    </li>
-
                 </ul>
             </section>
         </main>

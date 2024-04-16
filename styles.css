@@ -74,6 +74,8 @@ section.items {
     padding: 15px;
     background-color: rgb(236 237 246);
     border-radius: 10px;
+    display: flex;
+    flex-flow: column wrap;
 }
 
 .add-button {
@@ -88,20 +90,56 @@ section.items {
     border: 1px solid rgb(101 102 129);
 }
 
+.item-button {
+    padding: 10px 30px;
+    border-radius: 10px;
+    border-style: solid;
+    font-size: 16px;
+    font-family: monospace, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: rgb(98 112 240);
+    color: white;
+    border: 1px solid rgb(101 102 129);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-buttons {
+    align-self: center;
+}
+
 .todo-list {
     display: flex;
     flex-flow: row wrap;
     gap: 20px;
-    padding: 10px;
+    padding: 0px; /* padding: 10px */
     justify-content: space-evenly;
 }
 
+.empty-list-message {
+    margin: 0 auto;
+}
+
 .todo-list-item {
+    display: flex;
+    flex-flow: row wrap;
     list-style-type: none;
-    width: 200px;
+    width: 100%;
     background-color: rgb(255 255 255);
     padding: 12px;
     border-radius: 10px;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.item-main-content {
+    width: 70%;
+}
+
+.trash-icon {
+    width: 22px;
+    filter: invert();
 }
 
 .todo-list-item p {
@@ -110,13 +148,18 @@ section.items {
 
 @media screen and (min-width: 900px) {
     main {
-        width: 60%;
+        width: 50%;
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
     main {
         width: 90%;
+    }
+
+    .todo-list-item {
+        display: flex;
+        flex-flow: column wrap;
     }
 
     .todo-list-item h2 {
@@ -131,8 +174,11 @@ section.items {
         font-size: 15px;
     }
 
-    .todo-list-item {
-        list-style-type: none;
-        width: auto;
+    .item-main-content {
+        width: 100%;
+    }
+
+    .item-buttons {
+        width: 100%;
     }
 }
